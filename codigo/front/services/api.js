@@ -1,7 +1,7 @@
 class Api {
   constructor() {
-    this.base = 'https://cashcraft-server.vercel.app'
-    this.clientesUrl = this.base + '/api/clientes'
+    this.base = 'https://cashcraft-server-git-deploy-cashcraft.vercel.app'
+    this.clientesUrl = this.base + '/clientes'
   }
 
   /** CRUD Cliente */
