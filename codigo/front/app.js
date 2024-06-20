@@ -27,11 +27,11 @@ const PORT = 8000;
 app.use(cors());
 
 /* Serve arquivos estáticos das pastas assets e data */
-// app.use('/assets', express.static(path.join(__dirname, 'assets')));
-// app.use('/data', express.static(path.join(__dirname, 'assets', 'data')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/data', express.static(path.join(__dirname, 'assets', 'data')));
 
 // // Serve arquivos estáticos para serviços
-// app.use('/services', express.static(path.join(__dirname, 'services')));
+app.use('/services', express.static(path.join(__dirname, 'services')));
 
 const views = path.join(__dirname, 'views');
 
