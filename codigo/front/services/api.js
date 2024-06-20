@@ -1,6 +1,6 @@
 class Api {
   constructor() {
-    this.base = ''
+    this.base = 'https://cashcraft-server.vercel.app'
     this.clientesUrl = this.base + '/api/clientes'
   }
 
