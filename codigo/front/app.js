@@ -15,12 +15,7 @@
 
 */
 
-const express = require('express');
-const jsonServer = require('json-server');
-const cors = require('cors');
-const path = require('path');
-
-/** Adaptado por Bernardo Alvim */
+/** Adaptado por @alvimdev */
 
 const express = require('express');
 const path = require('path');
