@@ -51,8 +51,10 @@ Para criar um projeto no Vercel e fazer o deploy, siga os passos abaixo:
 
 1. Após fazer login, você será direcionado ao dashboard do Vercel.
 2. Clique em "New Project".
-3. Selecione o repositório que deseja conectar. 
-(adicionar imagem)
+3. Selecione o repositório que deseja conectar.
+   
+![Captura de tela 2024-06-20 203016](https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1/assets/83983141/10d3727c-b2f0-4691-a368-d6846dadfb63)
+
 
 ### 3. Configurar o Projeto
 
