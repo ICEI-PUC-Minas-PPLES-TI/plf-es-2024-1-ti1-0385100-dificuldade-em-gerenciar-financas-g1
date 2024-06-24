@@ -1,7 +1,7 @@
-import Api from "../../services/api.js"
+import Api from "/services/api.js"
 const api = new Api()
 
-import { Cookie } from "../../services/cookie.js"
+import { Cookie } from "/services/cookie.js"
 const cookies = new Cookie()
 
 document.addEventListener('DOMContentLoaded', async () => {

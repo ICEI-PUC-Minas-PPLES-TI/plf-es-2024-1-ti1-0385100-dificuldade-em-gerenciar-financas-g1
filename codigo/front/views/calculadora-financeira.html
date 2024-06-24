@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="/assets/images/g1-ico.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../assets/css/sidebar.css">
-    <link rel="stylesheet" href="../assets/css/calculadora-financeira.css">
+    <link rel="stylesheet" href="/assets/css/sidebar.css">
+    <link rel="stylesheet" href="/assets/css/calculadora-financeira.css">
     <title>Calculadora Financeira</title>
-    <script src="../assets/js/sidebar.js" type="module"></script>
+    <script src="/assets/js/sidebar.js" type="module"></script>
 </head>
 <body>
     <aside id="sidebar">
@@ -34,19 +34,10 @@
                 </a>
             </li>
             <li class="sidebar-item">
-                <a href="#" class="sidebar-link collapsed has-dropdown" data-bs-toggle="collapse" data-bs-target="#auth"
-                    aria-expanded="false" aria-controls="auth">
-                    <i class="bi bi-gear-wide-connected"></i>
-                    <span>Manutenção...</span>
+                <a href="/lancamento" class="sidebar-link">
+                    <i class="bi bi-currency-exchange"></i>
+                    <span>Registros Financeiros</span>
                 </a>
-                <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">Manutenção...</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">Manutenção...</a>
-                    </li>
-                </ul>
             </li>
             <li class="sidebar-item">
                 <a href="/calculadora-financeira" class="sidebar-link">
@@ -65,31 +56,36 @@
     <main>
         <h3>Calculadora de Financiamento</h3>
         <section class="calculadora">
-            <form id="formulario-financiamento">
-                <div>
-                    <label for="valorFinanciamento">Valor a financiar:
-                    <input type="number" class="form-control" id="valorFinanciamento" name="valorFinanciamento" required>
-                    </label>
-                    <label for="tempoMeses">Tempo em meses:
-                    <input type="number" class="form-control" id="tempoMeses" name="tempoMeses" required>
-                    </label>
+            <form id="formulario-financiamento" class="container">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="valorFinanciamento">Valor a financiar:</label>
+                        <input type="number" id="valorFinanciamento" name="valorFinanciamento" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="tempoMeses">Tempo em meses:</label>
+                        <input type="number" id="tempoMeses" name="tempoMeses" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="taxaJuros">Taxa mensal (%):
-                    <input type="number" step="0.01" class="form-control" id="taxaJuros" name="taxaJuros" required>
-                    </label>
-                    <label for="metodoAmortizacao">Método de amortização:
-                    <select class="form-control" id="metodoAmortizacao" name="metodoAmortizacao" required>
-                        <option value="sac">SAC</option>
-                        <option value="price">Price</option>
-                    </select>
-                    </label>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="taxaJuros">Taxa mensal (%):</label>
+                        <input type="number" step="0.01" id="taxaJuros" name="taxaJuros" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="metodoAmortizacao">Método de amortização:</label>
+                        <select id="metodoAmortizacao" name="metodoAmortizacao" required>
+                            <option value="sac">SAC</option>
+                            <option value="price">Price</option>
+                        </select>
+                    </div>
                 </div>
-                <input type="submit" class="btn btn-primary" id="btnCalcular" value="Calcular">
-                <p>Parcela: <span id="resultadoParcela"></span></p>
+                <button type="submit" id="btnCalcular">Calcular</button>
+                <p class="mt-3">Parcela: <span id="resultadoParcela"></span></p>
             </form>
+            <button id="btnDicas" class="btn btn-secondary mt-3">Dicas</button>
         </section>
-        <section class="dicas">
+        <dialog id="dicas" class="dicas">
             <article style="display: none;" id="texto">
                 <i>
                 <h3>Dicas</h3>
@@ -100,25 +96,28 @@
             </article>
             <article style="display: block;" id="topicos">
                 <i>
-                <h3>3 Tópicos Importantes sobre Financiamento e Amortização</h3>
+                <h3 id="topics-title"></h3>
                 <img src="https://static.thenounproject.com/png/771246-200.png">
                 </i>
                 <ul id="dicas-list">
                 <!-- Dicas serão carregadas aqui -->
                 </ul>
             </article>
-        </section>
+            <form method="dialog"><button class="btn btn-secondary">Fechar</button></form>
+        </dialog>
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', async () => {
-            const dicasJson = await fetch('../assets/data/dicas.json').then(response => response.json());
+            const dicasJson = await fetch('/assets/data/dicas.json').then(response => response.json());
 
             const textoConteudo1 = document.getElementById('texto-conteudo-1');
             const textoConteudo2 = document.getElementById('texto-conteudo-2');
             textoConteudo1.textContent = dicasJson.dicas.textoCheio[0].conteudo[0];
             textoConteudo2.textContent = dicasJson.dicas.textoCheio[0].conteudo[1];
 
+            const topicsTitle = document.getElementById('topics-title');
+            topicsTitle.textContent = `${dicasJson.dicas.topicos.length} Tópicos Importantes sobre Financiamento e Amortização`;
             const dicasList = document.getElementById('dicas-list');
             dicasJson.dicas.topicos.forEach(dica => {
                 const li = document.createElement('li');
@@ -133,7 +132,17 @@
                 dicasList.appendChild(li);
             });
         });
+
+        document.getElementById('btnDicas').addEventListener('click', () => {
+            const dicasDialog = document.getElementById('dicas');
+            dicasDialog.showModal();
+        });
+
     </script>
-    <script src="../assets/js/calculadora-financeira.js"></script>
+    <script src="/assets/js/calculadora-financeira.js"></script>
+    <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 </html>

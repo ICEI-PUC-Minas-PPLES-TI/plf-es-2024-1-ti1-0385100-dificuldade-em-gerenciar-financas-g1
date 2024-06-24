@@ -1,0 +1,87 @@
+main {
+    padding: 5% 0;
+    height: 100%;
+    width: 100%;
+}
+
+.hidden-balance {
+    display: none;
+}
+.visible-balance {
+    display: inline;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.card-body i {
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.card-body i:hover {
+    font-size: 28px;
+}
+
+
+.card-btn{
+    align-self: flex-end;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    height: 140px;
+    width: 140px;
+    border-radius: 15px;
+}
+
+.action {
+    cursor: pointer;
+    -webkit-transition: 400ms;
+}
+
+.action:hover {
+    transform: scale(1.1);
+    -webkit-transition: 400ms;
+}
+
+.graph-container {
+    width: 100%;
+    max-width: 70%;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.graph-container canvas {
+    width: 100%;
+    height: 300px;
+}
+
+@media (min-width: 768px) {
+    .card {
+        width: 20%;
+    }
+
+}

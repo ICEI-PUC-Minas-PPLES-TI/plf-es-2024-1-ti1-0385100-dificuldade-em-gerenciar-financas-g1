@@ -1,14 +1,17 @@
 class Api {
   constructor() {
-    this.base = 'https://cashcraft-server-git-deploy-cashcraft.vercel.app'
-    this.clientesUrl = this.base + '/clientes'
+    this.base = 'https://cashcraft-server-cashcraft.vercel.app/'
+    this.urlClients = base + 'clientes'
+    this.urlLaunches = base + 'lancamentos'
+    this.urlMethods = base + 'metodos'
+    this.urlCategories = base + 'categorias'
   }
 
   /** CRUD Cliente */
 
   async createClient(body) {
     try {
-      const response = await fetch(this.clientesUrl, {
+      const response = await fetch(this.urlClients, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,7 +34,7 @@ class Api {
   async readClient(username) {
     const cliente = (await this.getAllClients()).find(cliente => cliente.username === username)
     try {
-      const response = await fetch(`${this.clientesUrl}/${cliente.id}`, {
+      const response = await fetch(`${this.urlClients}/${cliente.id}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -53,7 +56,7 @@ class Api {
 
   async updateClient(body, id) {
     try {
-      const response = await fetch(`${this.clientesUrl}/${id}`, {
+      const response = await fetch(`${this.urlClients}/${id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +78,7 @@ class Api {
 
   async deleteClient(id) {
     try {
-      const response = await fetch(`${this.clientesUrl}/${id}`, {
+      const response = await fetch(`${this.urlClients}/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json',
@@ -96,7 +99,7 @@ class Api {
 
   async getAllClients() {
     try {
-      const response = await fetch(this.clientesUrl, {
+      const response = await fetch(this.urlClients, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -109,6 +112,140 @@ class Api {
       }
 
       return response.json()
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
+
+  /** CRUD Lançamentos */
+
+  async getUserLaunches(username) {
+    const cliente = (await this.getAllClients()).find(cliente => cliente.username === username)
+    try {
+      const response = await fetch(`${this.urlClients}/${cliente.id}/lancamentos`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.json()
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
+  async createLaunch(body) {
+    try {
+      const response = await fetch(this.urlLaunches, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(body)
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.status
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
+  async updateLaunch(body, id) {
+    try {
+      const response = await fetch(`${this.urlLaunches}/${id}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(body)
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.status
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
+  async deleteLaunch(id) {
+    try {
+      const response = await fetch(`${this.urlLaunches}/${id}`, {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.status
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
+  /** GET DB default params */
+
+  async getMethods() {
+    try{
+      const response = await fetch(this.urlMethods, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.json();
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
+  async getCategories() {
+    try{
+      const response = await fetch(this.urlCategories, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        }
+      })
+
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.json();
     } catch (err) {
       console.error(err)
       throw err

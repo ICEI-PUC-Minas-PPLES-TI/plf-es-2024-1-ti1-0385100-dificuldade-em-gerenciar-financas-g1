@@ -57,13 +57,13 @@ app.get('/dashboard', (req, res) => {
 });
 
 /* Ainda não commitados nesta branch */
-// app.get('/calculadora-financeira', (req, res) => {
-//   res.sendFile(path.join(views, 'calculadora-financeira.html'));
-// });
+app.get('/calculadora-financeira', (req, res) => {
+  res.sendFile(path.join(views, 'calculadora-financeira.html'));
+});
 
-// app.get('/lancamento', (req, res) => {
-//   res.sendFile(path.join(views, 'lancamento.html'));
-// });
+app.get('/lancamento', (req, res) => {
+  res.sendFile(path.join(views, 'lancamento.html'));
+});
 
 // Rota para páginas que não existem (404)
 app.get('*', (req, res) => {
