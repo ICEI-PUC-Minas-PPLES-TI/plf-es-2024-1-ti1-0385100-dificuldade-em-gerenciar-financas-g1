@@ -130,7 +130,7 @@
               <div class="alert alert-warning collapse" role="alert" id="collapseProblema">
                 Nesse momento você deve apresentar o problema que a sua aplicação deve resolver. No entanto, não é a hora de comentar sobre a aplicação. Descreva também o contexto em que essa aplicação será usada, se houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de fato existir, pois ainda não é a hora de apresentar requisitos detalhados ou projetos.
               </div>
-              <p>Muitas pessoas enfrentam desafios ao administrar suas finanças. No entanto, é comum também que elas tenham dificuldades em direcionar seus recursos para alcançar metas financeiras específicas, como comprar um carro, uma casa ou viajar.</p>
+              <p>A falta de controle financeiro é um problema significativo no Brasil. Mais da metade da população (58%) não gerencia suas finanças, e 81% não têm conhecimento básico sobre como controlar seus gastos. Este descontrole resulta em 77,3% das famílias endividadas, com 26% gastando mais do que ganham e 42,6% raramente sobrando dinheiro no fim do mês. Apenas 45,2% realizam um controle sistemático do orçamento, e 29,3% fazem isso de forma precária, apenas na memória. Além disso, 39% nunca ou raramente calculam os juros de compras parceladas, e 33% nem sabem se já possuem outras prestações ao parcelar algo novo.</p>
             </section>
 
             <section>
@@ -139,7 +139,7 @@
               <div class="alert alert-warning collapse" role="alert" id="collapseObjetivos">
                 Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
               </div>
-              <p>Nosso objetivo principal é criar um produto abrangente que solucione tanto problemas básicos quanto complexos relacionados à gestão financeira pessoal. Isso inclui fornecer orientações práticas e ferramentas úteis, como dicas de financiamento, tabelas de amortização e calculadoras de juros e rendimentos. Queremos fazer com que as pessoas entendam melhor suas finanças e a alcancem seus objetivos financeiros de maneira eficaz.</p>
+              <p>Nosso objetivo é criar um produto que resolva tanto problemas básicos quanto complexos de gestão financeira pessoal. Ofereceremos orientações práticas e ferramentas úteis, como dicas de financiamento, tabelas de amortização e calculadoras de juros e rendimentos. Queremos capacitar as pessoas a entenderem melhor suas finanças e a alcançarem seus objetivos financeiros de maneira eficaz.</p>
             </section>
 
             <section>
@@ -148,7 +148,7 @@
               <div class="alert alert-warning collapse" role="alert" id="collapseJustificativa">
                 Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software. O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
               </div>
-              <p>É inegável que oferecer suporte financeiro para pessoas é importante. Muitas enfrentam dificuldades em lidar com dinheiro, o que pode resultar em endividamento e falta de planejamento financeiro. Ao capacitarmos as pessoas com conhecimentos sólidos em finanças pessoais, não apenas melhoramos suas vidas, mas também fortalecemos a estabilidade financeira das comunidades. Além disso, ao disponibilizar ferramentas práticas, como dicas de financiamento e calculadoras de juros, estamos facilitando o processo de tomada de decisões financeiras e ajudando as pessoas a alcançarem seus objetivos financeiros.</p>
+              <p>A falta de controle financeiro leva ao endividamento e à falta de planejamento. Capacitar as pessoas com conhecimentos em finanças pessoais pode melhorar suas vidas e fortalecer a estabilidade financeira das comunidades. Com 77,3% das famílias endividadas e 26% gastando mais do que ganham, é essencial fornecer suporte financeiro. Ferramentas práticas como dicas de financiamento e calculadoras de juros facilitam a tomada de decisões financeiras, ajudando as pessoas a alcançar seus objetivos.</p>
             </section>
 
             <section>
@@ -158,7 +158,7 @@
                 Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações hierárquicas, etc.
                 Adicione informações sobre o público-alvo por meio de uma descrição textual, ou diagramas de personas, mapa de stakeholders, ou como o grupo achar mais conveniente.
               </div>
-              <p>O público buscado por esse projeto pode ser representado, em sua maioria, por jovens iniciando suas vidas financeiras e, portanto, possuem dificuldades em se organizar e, representado também, por trabalhadores classe C, que já possuem conhecimento prévio acerca da gerência de finanças, mas que precisam de um suporte para alcançar outros objetivos financeiros.</p>
+              <p>Nosso público-alvo inclui jovens iniciando suas vidas financeiras e trabalhadores da classe C, que já possuem algum conhecimento sobre gestão financeira, mas precisam de suporte adicional para alcançar objetivos mais elevados. A combinação de orientação prática e ferramentas financeiras ajudará esses grupos a gerir melhor suas finanças e a construir um futuro financeiro mais sólido.              </p>
             </section>
 
           </section>
@@ -521,33 +521,87 @@
               </div>
 
               <section>
-                <h5>Estrutura de Dados - Contatos<span class="exemplo">EXEMPLO</span></h5>
-                <p>Contatos da aplicação</p>
+                <h5>Estrutura de Dados - Clientes</h5>
+                <p>Clientes json</p>
                 <pre>
-                  {
-                    "id": 1,
-                    "nome": "Leanne Graham",
-                    "cidade": "Belo Horizonte",
-                    "categoria": "amigos",
-                    "email": "Sincere@april.biz",
-                    "telefone": "1-770-736-8031",
-                    "website": "hildegard.org"
-                  }
+                {
+                    "username": "alvino",
+                    "nome": "Alvim",
+                    "email": "alvim@teste.bet",
+                    "senha": "Bernardo123!",
+                    "salario": 700.5,
+                    "id": 1
+                }
                 </pre>
               </section>
 
               <section>
-                <h5>Estrutura de Dados - Usuários<span class="exemplo">EXEMPLO</span></h5>
-                <p>Registro dos usuários do sistema utilizados para login e para o perfil do sistema</p>
+                <h5>Estrutura de Dados - Categorias</h5>
+                <p>Categorias json</p>
                 <pre>
-                  {
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    email: "admin@abc.com"
-                    id: "eed55b91-45be-4f2c-81bc-7686135503f9"
-                    login: "admin"
-                    nome: "Administrador do Sistema"
-                    senha: "123"
-                  }
+                {
+                    "id": 1,
+                    "tipo": "Despesas"
+                },
+                {
+                    "id": 2,
+                    "tipo": "Entretenimento"
+                },
+                {
+                    "id": 3,
+                    "tipo": "Vestuario"
+                },
+                {
+                    "id": 4,
+                    "tipo": "Alimentação"
+                },
+                {
+                    "id": 5,
+                    "tipo": "Fixos"
+                },
+                {
+                    "id": 6,
+                    "tipo": "Outros"
+                }
+                </pre>
+              </section>
+
+              <section>
+                <h5>Estrutura de Dados - Metodos</h5>
+                <p>Metodos json</p>
+                <pre>
+                {
+                    "id": 1,
+                    "tipo": "Dinheiro"
+                },
+                {
+                    "id": 2,
+                    "tipo": "Débito"
+                },
+                {
+                    "id": 3,
+                    "tipo": "Crédito"
+                },
+                {
+                    "id": 4,
+                    "tipo": "Pix"
+                }
+                </pre>
+              </section>
+
+              <section>
+                <h5>Estrutura de Dados - Lançamentos</h5>
+                <p>Lançamentos json</p>
+                <pre>
+                {
+                  "clienteId": 4,
+                  "descricao": "Conta de luz",
+                  "categoriaId": 1,
+                  "metodoId": 2,
+                  "valor": 170.00,
+                  "data": "06-06-2024",
+                  "id": 1
+                 }
                 </pre>
               </section>
             </section>
@@ -565,22 +619,23 @@
               <section>
                 <h5>Images:</h5>
                 <ul>
-                  <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>Unsplash - <a target="_blank" href="https://unsplash.com/">https://unsplash.com/</a></li>
                 </ul>
               </section>
 
               <section>
                 <h5>Fonts:</h5>
                 <ul>
-                  <li>Icons Font Face - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>Icons Font - <a target="_blank" href="https://fontawesome.com/">https://fontawesome.com/</a></li>
                 </ul>
               </section>
 
               <section>
                 <h5>Scripts:</h5>
                 <ul>
-                  <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a><span class="exemplo">EXEMPLO</span></li>
-                  <li>Bootstrap 4 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a><span class="exemplo">EXEMPLO</span></li>
+                  <li>jQuery - <a target="_blank" href="http://www.jquery.com/">http://www.jquery.com/</a></li>
+                  <li>Bootstrap 5 - <a target="_blank" href="http://getbootstrap.com/">http://getbootstrap.com/</a></li>
+                  <li>FormsPree - <a target="_blank" href="https://formspree.io/">https://formspree.io/</a></li>
                 </ul>
               </section>
             </section>
@@ -656,6 +711,8 @@
               <p>Apresente as referências bibliográficas utilizadas no projeto. Inclua itens como: (1) livros, artigos, tutoriais, etc. utilizados no desenvolvimento da solução; (2) links para sites, blogs, etc. utilizados no desenvolvimento da solução.</p>
             </div>
             <p id="ref_gitworkflow"><a href="https://docs.google.com/document/d/18s7h8n4jnAPqluq1nuQJEAvUErH1XAuxvX5L8fD9mHE/edit?usp=sharing">Documento utilizado pelo grupo para estabelecer o WorkFlow</a> - Arthur Henrique Chaves, 1º Período de Ciências de Dados [Adaptado]</p>
+            <p id="ref_gitworkflow"><a href="https://www.spcbrasil.org.br/uploads/st_imprensa/release_educacao_financeira_v7.pdf">Fonte de pesquisa</a> - Pesquisa SPC Brasil e CNDL</p>
+            <p id="ref_gitworkflow"><a href="https://www.spcbrasil.org.br/uploads/st_imprensa/release_pesquisa_educacao_financeira_vf.pdf">Fonte de pesquisa</a> - Estudo SPC Brasil</p>
           </section>
 
         </div>
