@@ -4,7 +4,7 @@ const api = new Api()
 import {Cookie} from '/services/cookie.js'
 const cookies = new Cookie()
 
-async function login(credential, password) {
+export async function login(credential, password) {
     const clientes = await api.getAllClients()
     const cliente = clientes.find(cliente => cliente.email === credential || cliente.username === credential)
     if(!cliente) return alert("Usuário não encontrado")
@@ -16,12 +16,12 @@ async function login(credential, password) {
     else return alert("Senha inválida")
 }
 
-function logout() {
+export function logout() {
     cookies.unsetCookie('username')
     window.location.href = '/login'
 }
 
-async function signin(username, name, password, email, budget) {
+export async function signin(username, name, password, email, budget) {
     var regex = /^(?=(?:.*?[A-Z]){1})(?=(?:.*?[0-9]){2})(?=(?:.*?[!@#$%*()_+^&}{:;?.]){1})(?!.*\s)[0-9a-zA-Z!@#$%;*(){}_+^&]*$/;
 
     if(!username || !name || !password || !email || !budget) return alert("Preencha todos os campos")
@@ -50,14 +50,6 @@ async function signin(username, name, password, email, budget) {
     else alert("Erro ao cadastrar usuário")
 }
 
-function isAuthenticated() {
+export function isAuthenticated() {
     return cookies.getCookie('username') !== undefined
-}
-
-
-export {
-    login,
-    logout,
-    signin,
-    isAuthenticated
 }
