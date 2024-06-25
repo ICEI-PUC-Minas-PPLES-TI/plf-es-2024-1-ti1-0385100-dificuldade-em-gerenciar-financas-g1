@@ -1,10 +1,10 @@
 class Api {
   constructor() {
     this.base = 'https://cashcraft-server-cashcraft.vercel.app/'
-    this.urlClients = base + 'clientes'
-    this.urlLaunches = base + 'lancamentos'
-    this.urlMethods = base + 'metodos'
-    this.urlCategories = base + 'categorias'
+    this.urlClients = this.base + 'clientes'
+    this.urlLaunches = this.base + 'lancamentos'
+    this.urlMethods = this.base + 'metodos'
+    this.urlCategories = this.base + 'categorias'
   }
 
   /** CRUD Cliente */
