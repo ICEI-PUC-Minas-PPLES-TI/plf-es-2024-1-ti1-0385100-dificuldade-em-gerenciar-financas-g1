@@ -9,31 +9,86 @@
       "id": 1
     }
   ],
-  "lancamentos": [],
+  "lancamentos": [
+    {
+      "clienteId": 1,
+      "data": "2024-06-14",
+      "descricao": "Comprei uma coquinha",
+      "valor": -8.5,
+      "categoriaId": 4,
+      "metodoId": 2,
+      "id": 1
+    },
+    {
+      "clienteId": 1,
+      "data": "2024-06-15",
+      "descricao": "Comprei uma calça",
+      "valor": -149.99,
+      "categoriaId": 3,
+      "metodoId": 4,
+      "id": 2
+    },
+    {
+      "clienteId": 1,
+      "data": "2024-05-17",
+      "descricao": "Fiz um freela",
+      "valor": 1200,
+      "categoriaId": 6,
+      "metodoId": 1,
+      "id": 3
+    },
+    {
+      "clienteId": 1,
+      "data": "2024-06-15",
+      "descricao": "Comprei uma maquina de barbear",
+      "valor": -200,
+      "categoriaId": 6,
+      "metodoId": 3,
+      "id": 4
+    }
+  ],
   "categorias": [
     {
-      "cod": 1,
+      "id": 1,
       "tipo": "Despesas"
     },
     {
-      "cod": 2,
+      "id": 2,
       "tipo": "Entretenimento"
     },
     {
-      "cod": 3,
+      "id": 3,
       "tipo": "Vestuario"
     },
     {
-      "cod": 4,
+      "id": 4,
       "tipo": "Alimentação"
     },
     {
-      "cod": 5,
+      "id": 5,
       "tipo": "Fixos"
     },
     {
-      "cod": 6,
+      "id": 6,
       "tipo": "Outros"
+    }
+  ],
+  "metodos": [
+    {
+      "id": 1,
+      "tipo": "Dinheiro"
+    },
+    {
+      "id": 2,
+      "tipo": "Débito"
+    },
+    {
+      "id": 3,
+      "tipo": "Crédito"
+    },
+    {
+      "id": 4,
+      "tipo": "Pix"
     }
   ]
 }
