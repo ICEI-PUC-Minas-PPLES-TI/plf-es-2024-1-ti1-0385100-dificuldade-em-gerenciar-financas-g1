@@ -17,19 +17,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const fixos_title = document.getElementById('fixos-title')
     let actions
 
-    const checkWindowSize = () => {
-        if (window.innerWidth <= 800 && actions) {
-            tabela.style.display = 'none'
-            fixos_title.style.display = 'none'
-        } else {
-            tabela.style.display = ''
-            fixos_title.style.display = ''
-        }
-    }
-
-    window.addEventListener('resize', checkWindowSize)
-    checkWindowSize()
-
     document.getElementById('btnDialog').addEventListener('click', () => criaLancamento(cliente.id))
     document.getElementById('close-add-btn').addEventListener('click', () => closeDialog('dialog-add-fixos'))
     document.getElementById('close-edit-btn').addEventListener('click', () => closeDialog('dialog-edit-fixos'))
@@ -79,12 +66,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             actions.appendChild(deleteBtn)
             actions.appendChild(saveBtn)
 
-            // Esconder a tabela se a largura da janela for inferior a 700px
-            if (window.innerWidth < 800) {
-                tabela.style.display = 'none'
-                fixos_title.style.display = 'none'
-            }
-
             // Adicionar eventos aos botões
             cancelBtn.addEventListener('click', () => {
                 // Desabilitar os campos
@@ -106,9 +87,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                 
                 // Limpar a referência dos botões
                 actions = null
-
-                // Mostrar a tabela novamente
-                checkWindowSize()
             })
 
             deleteBtn.addEventListener('click', () =>
@@ -158,8 +136,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     actions.removeChild(cancelBtn)
                     form.removeChild(actions)
 
-                    // Mostrar a tabela novamente
-                    checkWindowSize()
 
                     // Limpar a referência dos botões
                     actions = null

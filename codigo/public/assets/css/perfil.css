@@ -236,7 +236,7 @@ main form i {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin: 0;
+        margin: 0 0 20px 0;
     }
 
     .table{
@@ -246,6 +246,8 @@ main form i {
 
     .table-wrapper{
         width: 100%;
+        height: auto;
+        overflow-y: visible;
     }
 
     .table .btn {
