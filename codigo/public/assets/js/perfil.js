@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             form.appendChild(actions)
 
+
             const saveBtn = document.createElement('button')
             saveBtn.type = 'submit'
             saveBtn.className = 'btn btn-save'
@@ -66,6 +67,11 @@ document.addEventListener('DOMContentLoaded', async () => {
             actions.appendChild(deleteBtn)
             actions.appendChild(saveBtn)
 
+            // Esconder a tabela se a largura da janela for inferior a 700px
+            if (window.innerWidth < 700) {
+                tabela.style.display = 'none'
+            }
+
             // Adicionar eventos aos botões
             cancelBtn.addEventListener('click', () => {
                 // Desabilitar os campos
@@ -84,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 actions.removeChild(deleteBtn)
                 form.removeChild(actions)
 
-                
+
                 // Limpar a referência dos botões
                 actions = null
             })
@@ -285,5 +291,19 @@ const deletaCliente = async (id) => {
         } catch (error) {
             console.error('Erro ao deletar o cliente: ', error)
         }
+    }
+}
+
+function closeDialog(dialogId) {
+    const dialog = document.getElementById(dialogId)
+    if (dialog) {
+        dialog.close()
+    }
+}
+
+const showDialog = (dialogId) => {
+    const dialog = document.getElementById(dialogId)
+    if (dialog) {
+        dialog.showModal()
     }
 }
