@@ -1,0 +1,18 @@
+/* Estilos para a página de investimentos */
+
+.container {
+    max-width: 100%;
+    padding: 20px;
+}
+
+#acoes-list {
+    gap: 10px;
+}
+
+.chart-container {
+    margin-top: 20px;
+}
+
+.card-title {
+    color: purple
+}

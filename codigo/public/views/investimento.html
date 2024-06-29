@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/investimentos.css">
+    <title>Investimentos</title>
+    <script src="../assets/js/sidebar.js" type="module"></script>
+</head>
+
+<body>
+    <aside id="sidebar">
+        <div class="d-flex">
+            <button class="toggle-btn" type="button">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="/">CashCraft</a>
+            </div>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="/perfil" class="sidebar-link">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/dashboard" class="sidebar-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/lancamento" class="sidebar-link">
+                    <i class="bi bi-currency-exchange"></i>
+                    <span>Registros Financeiros</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/investimentos" class="sidebar-link">
+                    <i class="bi bi-graph-up"></i>
+                    <span>Investimentos</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/calculadora-financeira" class="sidebar-link">
+                    <i class="bi bi-calculator-fill"></i>
+                    <span>Calculadora Financeira</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link" id="logout-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main class="container">
+        <h2 class="text-center mt-4 mb-3">Rendimentos de Ações</h2>
+        <div id="acoes-list" class="d-flex flex-wrap justify-content-center">
+            <!-- Aqui serão listadas as informações das ações -->
+        </div>
+        <div class="chart-container mt-5">
+            <canvas id="myChart" width="800" height="400"></canvas>
+        </div>
+    </main>
+    <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../assets/js/investimentos.js"></script>
+</body>
+</html>

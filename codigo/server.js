@@ -46,7 +46,6 @@ app.get('/cadastro', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/cadastro.html'));
 });
 
-
 app.get('/perfil', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/perfil.html'))
 });
@@ -63,6 +62,9 @@ app.get('/lancamento', (req, res) => {
   res.sendFile(path.join(__dirname, 'public/views/lancamento.html'));
 });
 
+app.get('/investimentos', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public/views/investimento.html'));
+});
 
 const PORT = 3080;
 app.listen(PORT, () => {
