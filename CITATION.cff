@@ -1,65 +1,31 @@
-<<<<<<< HEAD
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: CashCraft - Dominando suas Finanças
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
+  - family-names: Alvim
+    given-names: Bernardo
+  - family-names: Marques
+    given-names: Athos
+  - family-names: Elias
+    given-names: João
+  - family-names: Carmo
+    given-names: Gabriel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Carneiro
+    given-names: Rommel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Nogueira
+    given-names: Simone
 keywords:
-  - 
-  - 
-repository-code: 
+  - Controle Financeiro
+  - Dificuldade em Gerenciar Finanças
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1
+repository: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2024-1-ti1-0385100-dificuldade-em-gerenciar-financas-g1
 license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
 version: 1.0.0
 date-released: 2022-07-14
-=======
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
-authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
->>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
+abstract: >
+  Este Software busca ajudar no entendimento e na aplicação do controle de gastos de pessoas interessadas em melhorar sua situação financeira

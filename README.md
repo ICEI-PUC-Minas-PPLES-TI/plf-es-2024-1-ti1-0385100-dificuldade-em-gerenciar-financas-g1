@@ -1,18 +1,22 @@
-# Nome do projeto
+# Dificuldades em Gerenciar Finanças - Grupo 01
 
-Escreva um ou dois parágrafo resumindo o objetivo do seu projeto.
+Muitas pessoas possuem dificuldades em gerenciar suas finanças. Contudo, diversas outras não são capazes de se organizar financeiramente,
+mas não conseguem direcionar parte de seus ativos em suas próprias metas, como comprar um carro, uma casa, viajar, etc.
+Para tanto, nos reunimos em prol da resolução desse problema, além de também ajudar as pessoas que nem sabem como começar a organizar
+suas situações financeiras.
 
 ## Alunos integrantes da equipe
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Athos Marques Ribeiro Fonseca
+* Bernardo Souza Alvim
+* Gabriel Carmo Ribeiro Moraes
+* João Paulo Fonseca Elias
 
 ## Professores responsáveis
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Rommel Vieira Carneiro
+* Simone Alves Nogueira
+* Gabriel Barbosa da Fonseca
 
 ## Instruções de utilização
 

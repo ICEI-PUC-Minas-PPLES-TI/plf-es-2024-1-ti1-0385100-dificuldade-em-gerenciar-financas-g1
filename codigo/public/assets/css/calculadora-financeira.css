@@ -1,0 +1,154 @@
+
+body { 
+    display: flex;
+    flex-direction: row;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-bottom: 20px;
+    scale: 0.8;
+}
+
+main h3 {
+    margin-bottom: 10px;
+}
+
+main form p {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+main form p span {
+    margin-left: 10px;
+    max-width: 40%;
+}
+
+
+main section, main dialog {
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+main dialog {
+    scale: 0.9;
+    height: 100vh;
+    width: 100vw;
+    border: solid 1px #611df1;
+}
+
+main dialog::backdrop{ 
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    padding: 0;
+}
+
+main form label {
+    margin-bottom: 20px;
+}
+
+main form input,
+main form select,
+main form button,
+main form span {
+    height: 35px;
+    border: solid 0.2px #601df134;
+    border-radius: 30px;
+    background-color: #fdfdfd;
+    padding: 0 20px;
+}
+
+main form input:focus {
+    caret-color: #5417d9;
+    outline: none;
+}
+
+main select {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+main form button {
+    margin-top: 20px;
+    width: 40%;
+    height: 45px;
+    font-weight: 600;
+    background-color: #611df1;
+    color: #e8e7e7;
+    padding: 0;
+}
+
+main form button:hover {
+    cursor: pointer;
+    transition: 200ms;
+    background-color: #5417d9;
+}
+
+main label {
+    display: flex;
+    flex-direction: column;
+}
+
+main article {
+    padding-bottom: 20px;
+}
+
+main article p {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+#topicos ul {
+    padding-left: 30px;
+    list-style: circle;
+}
+
+#topicos li {
+    margin-top: 10px;
+}
+
+main i {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main i img {
+    height: 30px;
+}
+
+main i img:hover {
+    cursor: pointer;
+    animation: rotate 1s linear;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-180deg);
+    }
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 50px;
+        scale: 1;
+    }
+
+    main form button {
+        width: 25%;
+    }
+
+    main dialog form {
+        max-width: 50%;
+    }
+}

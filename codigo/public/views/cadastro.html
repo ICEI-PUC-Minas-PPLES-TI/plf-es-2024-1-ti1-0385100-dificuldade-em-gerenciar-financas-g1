@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <title>Registro</title>
+</head>
+<body>
+    <aside>
+        <h1>CashCraft</h1>
+        <img src="../assets/images/g1-ico.png" onclick="window.location.href = '/'" alt="cash-craft logo" height="100px">
+    </aside>
+    <main>
+        <form id="signupForm">
+            <h2>Registro</h2>
+            <label for="name">
+                <i class="bi bi-person" aria-hidden="true"></i>
+                <input type="text" name="nome" id="name" placeholder="Nome" required>
+            </label>          
+            <label for="email">
+                <i class="bi bi-envelope" aria-hidden="true"></i>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </label>      
+            <label for="username">
+                <i class="bi bi-at" aria-hidden="true"></i>
+                <input type="text" name="usuario" id="username" placeholder="Usuario" required>
+            </label>
+            <label for="budget">
+                <i class="bi bi-cash-coin" aria-hidden="true"></i>
+                <input type="number" name="salario" id="budget" placeholder="Salario" required>
+            </label>
+            <label for="password">
+                <i class="bi bi-key" aria-hidden="true"></i>
+                <input type="password" name="senha" id="password" placeholder="Senha" required>
+            </label>
+            <button type="submit">Registrar <em>></em></button>
+        </form>
+        <p>Já possui uma conta? <a href="/login">Faça login</a></p>
+    </main>
+    <script type="module">
+        import { signin } from "../assets/js/auth.js";
+        const form = document.getElementById('signupForm');
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault()
+            const username = document.getElementById('username').value
+            const name = document.getElementById('name').value
+            const password = document.getElementById('password').value
+            const email = document.getElementById('email').value
+            const budget = +document.getElementById('budget').value
+
+            await signin(username, name, password, email, budget)
+            form.reset()
+        })
+    </script>
+</body>
+</html>

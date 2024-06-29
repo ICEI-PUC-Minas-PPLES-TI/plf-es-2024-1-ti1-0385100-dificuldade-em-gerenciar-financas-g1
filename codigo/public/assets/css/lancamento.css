@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+    animation: fadeIn 0.35s ease-in-out;
+}
+
+#sidebar {
+    width: 70px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #130e09;
+    display: flex;
+    flex-direction: column;
+}
+
+#sidebar.expand {
+    width: 260px;
+    min-width: 260px;
+}
+
+.toggle-btn {
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    padding: 1rem 1.5rem;
+}
+
+.toggle-btn i {
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+.sidebar-logo {
+    margin: auto 0;
+}
+
+.sidebar-logo a {
+    color: #FFF;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+#sidebar:not(.expand) .sidebar-logo,
+#sidebar:not(.expand) a.sidebar-link span {
+    display: none;
+}
+
+.sidebar-nav {
+    padding: 2rem 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: #FFF;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-link i {
+    font-size: 1.1rem;
+    margin-right: .75rem;
+}
+
+a.sidebar-link:hover {
+    background-color: rgba(255, 255, 255, .075);
+    border-left: 5px solid purple;
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
+    display: none;
+}
+
+#sidebar.expand .sidebar-nav .sidebar-item.show .sidebar-dropdown {
+    display: block;
+    animation: fadeIn 0.35s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.sidebar-dropdown a {
+    padding: .625rem 2.5rem;
+    background-color: rgba(255, 255, 255, .075);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.sidebar-dropdown a:hover {
+    border-left: 5px solid purple;
+}
+
+a.sidebar-link span {
+    margin-left: 0.75rem;
+}
+
+.sidebar-dropdown a i {
+    margin-right: 0.75rem;
+}
+
+.sidebar-dropdown a span {
+    margin-left: 0.25rem;
+}
+
+@media (max-width: 575.98px) {
+    .sidebar-logo a {
+        font-size: 1rem;
+    }
+
+    a.sidebar-link {
+        padding: .625rem 1.25rem;
+    }
+
+    .sidebar-link i {
+        font-size: 1rem;
+        margin-right: .25rem;
+    }
+}
+
+.launch-btn, .btn-purple {
+    background-color: #8a45ee;
+    color: #f2f2f2;
+    border-color: #8a45ee;
+}
+
+.launch-btn:hover, .btn-purple:hover {
+    background-color: #7946d8;
+    color: #f2f2f2;
+    border-color: #7946d8;
+}
+
+.launch-btn:focus, .btn-purple:focus {
+    background-color: #7946d8;
+    color: #f2f2f2;
+    border-color: #7946d8;
+}
+
+/* Adicione estes estilos adicionais para os cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 0 15px;
+}
+
+.card-lancamento {
+    flex: 1 1 calc(33.333% - 20px);
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin-bottom: 20px;
+    max-width: 400px;  /* Define uma largura máxima para os cards */
+}
+
+.card-lancamento h5 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-lancamento p {
+    margin-bottom: 5px;
+}
+
+.card-lancamento .btn {
+    margin-top: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .card-lancamento {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card-lancamento {
+        flex: 1 1 100%;
+        max-width: none; /* Remove a largura máxima para dispositivos móveis */
+    }
+}
+
+/* Estilos para o formulário de transações */
+#transaction-form-card {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#transaction-form-card .card-body {
+    padding: 2rem;
+}
+
+#expenses-form .form-control {
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .main {
+        padding: 1rem;
+    }
+}

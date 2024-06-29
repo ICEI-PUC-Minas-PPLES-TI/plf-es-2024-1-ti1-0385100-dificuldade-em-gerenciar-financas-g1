@@ -4,32 +4,31 @@ Mantenha neste diretório todo o código fonte do projeto.
 
 Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código.
 
-Uma sugestão da estrutura de diretórios para o projeto é a seguinte:
+Estruturação do CashCraft:
 
 ```plaintext
 codigo/  (essa pasta aqui)
 │
 ├── index.html
 │
-├── assets/
+├── utils/
 │   ├── css/
-│   │   ├── styles.css
+│   │   ├── main.css
 │   │   └── (outros arquivos .css)
 │   │
 │   ├── js/
-│   │   ├── main.js
+│   │   ├── app.js
 │   │   └── (outros arquivos .js)
 │   │
 │   ├── images/
 │   │   ├── logo.png
 │   │   └── (outras imagens)
 │   │
-│   └── fonts/
-│       ├── font1.ttf
-│       └── (outras fontes)
+│   └── data/
+│       ├── db.json
+│       └── (outras fontes de datos)
 │
 ├── pages/
-│   ├── about.html
 │   ├── contact.html
 │   └── (outras páginas)
 │

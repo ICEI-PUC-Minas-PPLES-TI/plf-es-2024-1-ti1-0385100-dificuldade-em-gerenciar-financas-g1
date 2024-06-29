@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/perfil.css">
+    <title>Perfil</title>
+    <script src="../assets/js/sidebar.js" type="module"></script>
+</head>
+
+<body>
+    <aside id="sidebar">
+        <div class="d-flex">
+            <button class="toggle-btn" type="button">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="/">CashCraft</a>
+            </div>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="/perfil" class="sidebar-link">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/dashboard" class="sidebar-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/lancamento" class="sidebar-link">
+                    <i class="bi bi-currency-exchange"></i>
+                    <span>Registros Financeiros</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/investimentos" class="sidebar-link">
+                    <i class="bi bi-graph-up"></i>
+                    <span>Investimentos</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/calculadora-financeira" class="sidebar-link">
+                    <i class="bi bi-calculator-fill"></i>
+                    <span>Calculadora Financeira</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link" id="logout-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <h2>Seja bem vindo, <span id="user-name"></span></h2>
+        <p>Aqui estão suas informações. Você pode editar elas clicando <button class="btn-link" id="edit-btn">aqui!</button></p>
+        <form id="client-form">
+            <div class="form-group">
+                <label for="name">
+                    <i class="bi bi-person-fill"></i>
+                    <input type="text" id="name" name="name" class="form-control" disabled>
+                </label>
+                <label for="email">
+                    <i class="bi bi-envelope-fill"></i>
+                    <input type="email" id="email" name="email" class="form-control" disabled>
+                </label>
+            </div>
+            <div class="form-group">
+                <label for="salary">
+                    <i class="bi bi-cash-stack"></i>
+                    <input type="text" id="salary" name="salary" class="form-control" disabled>
+                </label>
+                <label for="password">
+                    <i class="bi bi-key-fill"></i>
+                    <input type="password" id="password" name="password" class="form-control" value="********" disabled>
+                </label>
+            </div>
+        </form>
+
+        <div class="fixos-title mb-3" id="fixos-title">
+            <h2>Lançamentos Fixos</h2>
+            <button class="btn btn-primary launch-btn" id="btnDialog" type="button"><i class="bi bi-plus-circle text-white"></i></button>
+        </div>
+        <div class="table-wrapper">
+            <table id="fixos" class="table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <dialog id="dialog-add-fixos" class="dialog">
+            <form id="novo-lancamento-form">
+                <div class="form-group">
+                    <button class="close border-none btn" id="close-add-btn" type="button"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <label for="descricao-add">
+                    Descrição:
+                    <input type="text" id="descricao-add" name="descricao-add" class="form-control" required>
+                </label>
+                <label for="valor-add">
+                    Valor:
+                    <input type="text" id="valor-add" name="valor-add" class="form-control" required>
+                </label>
+                <button type="submit" class="btn launch-btn">Adicionar</button>
+            </form>
+        </dialog>
+        <dialog id="dialog-edit-fixos" class="dialog">
+            <form id="edita-lancamento-form" method="dialog">
+                <div class="form-group">
+                    <button class="close border-none btn" id="close-edit-btn"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <label for="descricao-edit">
+                    Descrição:
+                    <input type="text" id="descricao-edit" name="descricao-edit" class="form-control" required>
+                </label>
+                <label for="valor-edit">
+                    Valor:
+                    <input type="text" id="valor-edit" name="valor-edit" class="form-control" required>
+                </label>
+                <button type="submit" class="btn launch-btn">Editar</button>
+            </form>
+        </dialog>
+    </main>
+    <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../assets/js/perfil.js"></script>
+</body>
+</html>

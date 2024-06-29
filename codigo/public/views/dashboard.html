@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/sidebar.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    <title>Dashboard</title>
+    <script src="../assets/js/sidebar.js" type="module"></script>
+</head>
+<body>
+    <aside id="sidebar">
+        <div class="d-flex">
+            <button class="toggle-btn" type="button">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="sidebar-logo">
+                <a href="/">CashCraft</a>
+            </div>
+        </div>
+        <ul class="sidebar-nav">
+            <li class="sidebar-item">
+                <a href="/perfil" class="sidebar-link">
+                    <i class="bi bi-person"></i>
+                    <span>Perfil</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/dashboard" class="sidebar-link">
+                    <i class="bi bi-house"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/lancamento" class="sidebar-link">
+                    <i class="bi bi-currency-exchange"></i>
+                    <span>Registros Financeiros</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/investimentos" class="sidebar-link">
+                    <i class="bi bi-graph-up"></i>
+                    <span>Investimentos</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="/calculadora-financeira" class="sidebar-link">
+                    <i class="bi bi-calculator-fill"></i>
+                    <span>Calculadora Financeira</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
+                <a href="#" class="sidebar-link" id="logout-btn">
+                    <i class="bi bi-box-arrow-right"></i>
+                    <span>Logout</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <main>
+        <section class="cards">
+            <div class="card" id="amount">
+                <div class="card-body">
+                    <div class="card-title">Saldo</div>
+                    <div class="card-text">
+                        <span id="balance" class="visible-balance"></span>
+                        <span id="hidden-balance" class="hidden-balance">----</span>
+                    </div>
+                    <div class="card-button">
+                        <i id="eye-open" class="bi bi-eye"></i>
+                        <i id="eye-closed" class="bi bi-eye-slash hidden-balance"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card action" id="launches" onclick="window.location.href = '/lancamento'">
+                <div class="card-body">
+                    <div class="card-title">Lançamentos</div>
+                    <div class="card-img">
+                        <img width="64" height="64" src="https://img.icons8.com/dusk/64/exchange.png" alt="exchange"/>
+                    </div>
+                </div>
+            </div>
+            <div class="card action" id="finnances" onclick="window.location.href = '/calculadora-financeira'">
+                <div class="card-body">
+                    <div class="card-title">Financiamento</div>
+                    <div class="card-img">
+                        <img width="64" height="64" src="https://img.icons8.com/dusk/64/donation.png" alt="donation"/>
+                    </div>
+                </div>
+            </div>
+            <div class="card action" id="investment" onclick="">
+                <div class="card-body">
+                    <div class="card-title">Investimento</div>
+                    <div class="card-img">
+                        <img width="64" height="64" src="https://img.icons8.com/dusk/64/coin-in-hand.png" alt="coin-in-hand"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="graphs">
+            <div class="graph-container">
+                <canvas id="categoryExpensesLineChart"></canvas>
+            </div>
+        </section>             
+    </main>
+    <script type="module" src="../assets/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+node_modules/
+build
+npm-debug.log
+.nyc
+.env
+.DS_Store
+
+# Arquivo de confihurações para API Keys etc
+config.js

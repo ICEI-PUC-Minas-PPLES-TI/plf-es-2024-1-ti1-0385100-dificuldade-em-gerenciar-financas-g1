@@ -1,0 +1,32 @@
+{
+"dicas": {
+    "textoCheio": [
+        {
+            "titulo": "Dicas",
+            "conteudo": [
+                "Ao buscar financiamento, é essencial entender a amortização, o processo de pagamento gradual de um empréstimo ao longo do tempo. Comparar diferentes opções de empréstimo é crucial, considerando não apenas a taxa de juros, mas também o prazo e o tipo de amortização oferecido. Antes de fechar qualquer acordo, é importante ler os termos do contrato com atenção, incluindo taxas adicionais e cláusulas de renegociação.",
+                "Entender as diferentes formas de amortização, como constante e crescente, pode ajudar a determinar o impacto nos pagamentos mensais e no custo total do empréstimo. Optar por um prazo mais curto pode resultar em pagamentos mensais mais altos, mas em economia a longo prazo, devido a menos juros pagos. Uma análise cuidadosa dos termos do contrato pode evitar surpresas desagradáveis e garantir uma escolha financeira sólida para suas necessidades.",
+                "Existem dois métodos principais de amortização no Brasil: SAC e Price. No método SAC (Sistema de Amortização Constante), as parcelas são decrescentes, pois a amortização do principal é constante e os juros diminuem ao longo do tempo. No método Price, as parcelas são fixas, pois a amortização do principal aumenta ao longo do tempo enquanto os juros diminuem."
+            ]
+        }
+    ],
+    "topicos": [
+        {
+            "titulo": "Entenda a Amortização: Pagamento Gradual ao Longo do Tempo",
+            "descricao": "Ao buscar um financiamento, é crucial compreender a amortização, o processo de pagamento gradual de um empréstimo ao longo do tempo. Cada parcela paga amortiza uma parte do valor principal do empréstimo, enquanto a outra parte cobre os juros."
+        },
+        {
+            "titulo": "Compare Diferentes Opções: Taxa, Prazo e Amortização",
+            "descricao": "Comparar diferentes opções de financiamento é essencial. Vá além da taxa de juros e considere também o prazo e o tipo de amortização oferecidos. Prazos mais curtos geralmente resultam em pagamentos mensais mais altos, mas com menor custo total de juros a longo prazo. Já diferentes métodos de amortização impactam o valor das parcelas e o custo total do empréstimo."
+        },
+        {
+            "titulo": "Leia o Contrato com Atenção: Evite Surpresas",
+            "descricao": "Antes de fechar qualquer acordo, leia os termos do contrato com atenção, incluindo taxas adicionais, cláusulas de renegociação e outras condições. Compreender os detalhes do contrato pode evitar surpresas desagradáveis e garantir uma escolha financeira sólida para suas necessidades."
+        },
+        {
+            "titulo": "Métodos de Amortização: SAC vs Price",
+            "descricao": "Existem dois métodos principais de amortização no Brasil: SAC e Price. No método SAC (Sistema de Amortização Constante), as parcelas são decrescentes, pois a amortização do principal é constante e os juros diminuem ao longo do tempo. No método Price, as parcelas são fixas, pois a amortização do principal aumenta ao longo do tempo enquanto os juros diminuem. Escolher entre SAC e Price depende das suas prioridades financeiras, como estabilidade das parcelas ou economia total de juros."
+        }
+    ]
+}
+}

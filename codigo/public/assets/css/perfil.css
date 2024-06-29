@@ -1,0 +1,272 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 10%;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+main p {
+    text-align: center;
+}
+
+main span {
+    color: #9B78FF;
+}
+
+.actions {
+    margin-bottom: 20px;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #9B78FF;
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+.btn-link:hover {
+    color: #8a45ee;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-link:focus, .btn-save:focus, .btn-delete:focus, .btn-cancel:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+.btn-save, .btn-delete, .btn-cancel {
+    color: #f2f2f2;
+    justify-self: end;
+    min-width: 30%;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.btn-save {
+    background-color: #7946d8;
+}
+
+.btn-delete {
+    background-color: #D2042D;
+}
+
+.btn-cancel {
+    background-color: #ebe5fa;
+    color: #121212
+}
+
+.btn-save:hover {
+    background-color: #8a45ee;
+    color: #f2f2f2;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-delete:hover {
+    color: #f2f2f2;
+    background-color: #b60b2e;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-cancel:hover {
+    color: #121212;
+    background-color: #ebe5fa;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+}
+
+main form {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 25px;
+    width: 100%;
+}
+
+main form div {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+main form label {
+    color: #121212;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+main form i {
+    font-size: 1.5rem;
+}
+
+.table-wrapper {
+    height: 50%;
+    overflow-y: auto;
+    width: 70%;
+}
+
+.table {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.launch-btn {
+    background-color: #8a45ee;
+    color: #f2f2f2;
+    border-color: #8a45ee;
+}
+
+.launch-btn:hover {
+    background-color: #7946d8;
+    color: #f2f2f2;
+    border-color: #7946d8;
+}
+
+.launch-btn:focus {
+    background-color: #7946d8;
+    color: #f2f2f2;
+    border-color: #7946d8;
+}
+
+.fixos-title{
+    display: grid;
+    grid-template-columns: 90% 10%;
+    width: 70%;
+}
+
+.dialog {
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 10px;
+    border: 0.3px solid #ccc;
+    -webkit-transition: 50ms;
+}
+
+.dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+#btnDialog{
+    justify-self: flex-end;
+    align-self: baseline;
+    width: 100%;
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+}
+
+#novo-lancamento-form input:focus, #edita-lancamento-form input:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #8a45ee;
+}
+
+#novo-lancamento-form label, #edita-lancamento-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 800px) {
+    main {
+        padding: 10% 5% 5% 5%;
+    }
+
+    #client-form{
+        margin: 0;
+    }
+
+    main form div, main form {
+        gap: 0;
+    }
+
+    main form div {
+        flex-direction: column;
+    }
+
+    main form label {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    main form i {
+        font-size: 1.2rem;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0 0 20px 0;
+    }
+
+    .table{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .table-wrapper{
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+    }
+
+    .table .btn {
+        width: 100%;
+    }
+
+    #btnDialog{
+        width: 100%;
+        align-self: center;
+    }
+
+    .fixos-title{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        width: 100%;
+    }
+
+    .actions button {
+        width: 100%;
+        justify-content: center;
+    }
+}
