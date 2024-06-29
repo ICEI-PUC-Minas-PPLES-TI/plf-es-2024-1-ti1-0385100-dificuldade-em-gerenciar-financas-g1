@@ -45,6 +45,38 @@
       "categoriaId": 6,
       "metodoId": 3,
       "id": 4
+    },
+    {
+      "clienteId": 1,
+      "descricao": "Academia",
+      "data": "2024-06-28",
+      "valor": -99,
+      "categoriaId": 5,
+      "id": 5
+    },
+    {
+      "clienteId": 1,
+      "descricao": "Pensão",
+      "data": "2024-06-28",
+      "valor": 800,
+      "categoriaId": 5,
+      "id": 6
+    },
+    {
+      "clienteId": 1,
+      "descricao": "Internet",
+      "data": "2024-06-28",
+      "valor": -130.99,
+      "categoriaId": 5,
+      "id": 8
+    },
+    {
+      "clienteId": 1,
+      "descricao": "Condomínio",
+      "data": "2024-06-28",
+      "valor": -230,
+      "categoriaId": 5,
+      "id": 9
     }
   ],
   "categorias": [

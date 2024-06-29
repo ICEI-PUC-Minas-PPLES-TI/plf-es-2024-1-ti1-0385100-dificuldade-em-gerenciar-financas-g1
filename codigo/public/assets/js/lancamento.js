@@ -7,6 +7,7 @@ const cookies = new Cookie()
 document.addEventListener('DOMContentLoaded', async () => {
     const categories = await api.getCategories()
     const methods = await api.getMethods()
+    categories.splice(categories.indexOf(categories.find(method => method.id === 5)), 1)
     
     populateSelects(categories, methods)
 

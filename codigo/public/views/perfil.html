@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../assets/images/g1-ico.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/sidebar.css">
     <link rel="stylesheet" href="../assets/css/perfil.css">
     <title>Perfil</title>
     <script src="../assets/js/sidebar.js" type="module"></script>
 </head>
+
 <body>
     <aside id="sidebar">
         <div class="d-flex">
@@ -78,6 +81,57 @@
                 </label>
             </div>
         </form>
+
+        <div class="fixos-title mb-3" id="fixos-title">
+            <h2>Lançamentos Fixos</h2>
+            <button class="btn btn-primary launch-btn" id="btnDialog" type="button"><i class="bi bi-plus-circle text-white"></i></button>
+        </div>
+        <div class="table-wrapper">
+            <table id="fixos" class="table">
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+
+        <dialog id="dialog-add-fixos">
+            <form id="novo-lancamento-form" method="dialog">
+                <div class="form-group">
+                    <button class="close border-none btn" id="close-add-btn"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <label for="descricao-add">
+                    Descrição:
+                    <input type="text" id="descricao-add" name="descricao-add" class="form-control" required>
+                </label>
+                <label for="valor-add">
+                    Valor:
+                    <input type="text" id="valor-add" name="valor-add" class="form-control" required>
+                </label>
+                <button type="submit" class="btn launch-btn">Adicionar</button>
+            </form>
+        </dialog>
+        <dialog id="dialog-edit-fixos">
+            <form id="edita-lancamento-form" method="dialog">
+                <div class="form-group">
+                    <button class="close border-none btn" id="close-edit-btn"><i class="bi bi-x-lg"></i></button>
+                </div>
+                <label for="descricao-edit">
+                    Descrição:
+                    <input type="text" id="descricao-edit" name="descricao-edit" class="form-control" required>
+                </label>
+                <label for="valor-edit">
+                    Valor:
+                    <input type="text" id="valor-edit" name="valor-edit" class="form-control" required>
+                </label>
+                <button type="submit" class="btn launch-btn">Editar</button>
+            </form>
+        </dialog>
     </main>
     <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

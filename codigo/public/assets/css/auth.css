@@ -15,10 +15,20 @@ body {
 }
 
 aside {
-  background: linear-gradient(#7946d8, #8a45ee);
+  background: linear-gradient(#7946d8, #121212);
   color: #fff;
   padding: 100px 40px;
   text-align: center;
+}
+
+aside h1, aside img {
+  cursor: pointer;
+  transition: 300ms;
+}
+
+aside h1:hover, aside img:hover {
+  transform: scale(1.05);
+  transition: 300ms;
 }
 
 aside h1 {
