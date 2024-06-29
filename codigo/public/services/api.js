@@ -142,6 +142,27 @@ class Api {
     }
   }
 
+  async getLaunch(id) {
+    try {
+      const response = await fetch(`${this.urlLaunches}/${id}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      });
+
+      if(!response.ok){
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      return response.json()
+    } catch (err) {
+      console.error(err)
+      throw err
+    }
+  }
+
   async createLaunch(body) {
     try {
       const response = await fetch(this.urlLaunches, {
@@ -167,7 +188,7 @@ class Api {
   async updateLaunch(body, id) {
     try {
       const response = await fetch(`${this.urlLaunches}/${id}`, {
-        method: 'PATCH',
+        method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'

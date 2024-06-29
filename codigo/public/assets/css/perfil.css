@@ -27,6 +27,10 @@ main span {
     color: #9B78FF;
 }
 
+.actions {
+    margin-bottom: 20px;
+}
+
 .btn-link {
     background: none;
     border: none;
@@ -117,6 +121,70 @@ main form i {
     font-size: 1.5rem;
 }
 
+.table-wrapper {
+    height: 50%;
+    overflow-y: auto;
+    width: 70%;
+}
+
+.table {
+    margin-bottom: 0;
+    height: 100%;
+}
+
+.launch-btn {
+    background-color: #8a45ee;
+    color: #f2f2f2;
+    border-color: #8a45ee;
+}
+
+.launch-btn:hover {
+    background-color: #7946d8;
+    color: #f2f2f2;
+    border-color: #7946d8;
+}
+
+.launch-btn:focus {
+    background-color: #7946d8;
+    color: #f2f2f2;
+    border-color: #7946d8;
+}
+
+.fixos-title{
+    display: grid;
+    grid-template-columns: 92% 8%;
+    width: 70%;
+}
+
+#btnDialog{
+    justify-self: flex-end;
+    align-self: baseline;
+    width: 100%;
+}
+
+.btn:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+}
+
+#novo-lancamento-form input:focus, #edita-lancamento-form input:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #8a45ee;
+}
+
+#novo-lancamento-form label, #edita-lancamento-form label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -126,9 +194,13 @@ main form i {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
     main {
-        padding: 10% 5%;
+        padding: 10% 5% 5% 5%;
+    }
+
+    #client-form{
+        margin: 0;
     }
 
     main form div, main form {
@@ -153,6 +225,31 @@ main form i {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        margin: 0;
+    }
+
+    .table{
+        font-size: 0.8rem;
+        width: 100%;
+    }
+
+    .table-wrapper{
+        width: 100%;
+    }
+
+    .table .btn {
+        width: 100%;
+    }
+
+    #btnDialog{
+        width: 100%;
+        align-self: center;
+    }
+
+    .fixos-title{
+        display: grid;
+        grid-template-columns: 80% 20%;
+        width: 100%;
     }
 
     .actions button {
