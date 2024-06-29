@@ -43,6 +43,12 @@
                 </a>
             </li>
             <li class="sidebar-item">
+                <a href="/investimentos" class="sidebar-link">
+                    <i class="bi bi-graph-up"></i>
+                    <span>Investimentos</span>
+                </a>
+            </li>
+            <li class="sidebar-item">
                 <a href="/calculadora-financeira" class="sidebar-link">
                     <i class="bi bi-calculator-fill"></i>
                     <span>Calculadora Financeira</span>
@@ -100,10 +106,10 @@
             </table>
         </div>
 
-        <dialog id="dialog-add-fixos">
-            <form id="novo-lancamento-form" method="dialog">
+        <dialog id="dialog-add-fixos" class="dialog">
+            <form id="novo-lancamento-form">
                 <div class="form-group">
-                    <button class="close border-none btn" id="close-add-btn"><i class="bi bi-x-lg"></i></button>
+                    <button class="close border-none btn" id="close-add-btn" type="button"><i class="bi bi-x-lg"></i></button>
                 </div>
                 <label for="descricao-add">
                     Descrição:
@@ -116,7 +122,7 @@
                 <button type="submit" class="btn launch-btn">Adicionar</button>
             </form>
         </dialog>
-        <dialog id="dialog-edit-fixos">
+        <dialog id="dialog-edit-fixos" class="dialog">
             <form id="edita-lancamento-form" method="dialog">
                 <div class="form-group">
                     <button class="close border-none btn" id="close-edit-btn"><i class="bi bi-x-lg"></i></button>

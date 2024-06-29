@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,9 +8,8 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="../assets/css/lancamento.css" />
     <link rel="shortcut icon" href="" type="image/x-icon" />
-    <title>Formulários</title>
+    <title>Lançamentos</title>
 </head>
-
 <body>
     <div class="wrapper">
         <aside id="sidebar">
@@ -43,6 +41,12 @@
                     </a>
                 </li>
                 <li class="sidebar-item">
+                    <a href="/investimentos" class="sidebar-link">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Investimentos</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
                     <a href="/calculadora-financeira" class="sidebar-link">
                         <i class="bi bi-calculator-fill"></i>
                         <span>Calculadora Financeira</span>
@@ -61,10 +65,10 @@
                 <h1 class="fs-2">Registros Financeiros</h1>
             </div>
 
-            <!-- Formulário de Gastos -->
+            <!-- Formulário de Transações -->
             <div class="container">
                 <div class="row mx-1 my-3">
-                    <div class="card shadow-sm bg-white rounded border border-0">
+                    <div class="card shadow-sm bg-white rounded border border-0" id="transaction-form-card">
                         <div class="card-body bg-white">
                             <h4 class="fs-4 mb-3">Registrar Transações</h4>
                             <p>
@@ -105,6 +109,12 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Contêiner de Cards -->
+            <div class="container card-container" id="lancamentos-card-container">
+                <!-- Cards serão inseridos aqui -->
+            </div>
+
         </div>
     </div>
     <script src="https://kit.fontawesome.com/287f7513a7.js" crossorigin="anonymous"></script>
@@ -114,5 +124,4 @@
     <script type="module" src="../assets/js/sidebar.js"></script>
     <script type="module" src="../assets/js/lancamento.js"></script>
 </body>
-
 </html>

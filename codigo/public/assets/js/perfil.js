@@ -4,6 +4,8 @@ const api = new Api()
 import { Cookie } from "../../services/cookie.js"
 const cookies = new Cookie()
 
+import './lancamento.utils.js'
+
 document.addEventListener('DOMContentLoaded', async () => {
     const cliente = await api.readClient(cookies.getCookie('username'))
     carregaCliente(cliente)
@@ -14,19 +16,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     const tabela = document.getElementById('fixos')
     const fixos_title = document.getElementById('fixos-title')
     let actions
-
-    const checkWindowSize = () => {
-        if (window.innerWidth <= 700 && actions) {
-            tabela.style.display = 'none'
-            fixos_title.style.display = 'none'
-        } else {
-            tabela.style.display = ''
-            fixos_title.style.display = ''
-        }
-    }
-
-    window.addEventListener('resize', checkWindowSize)
-    checkWindowSize()
 
     document.getElementById('btnDialog').addEventListener('click', () => criaLancamento(cliente.id))
     document.getElementById('close-add-btn').addEventListener('click', () => closeDialog('dialog-add-fixos'))
@@ -77,11 +66,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             actions.appendChild(deleteBtn)
             actions.appendChild(saveBtn)
 
-            // Esconder a tabela se a largura da janela for inferior a 700px
-            if (window.innerWidth < 700) {
-                tabela.style.display = 'none'
-            }
-
             // Adicionar eventos aos botões
             cancelBtn.addEventListener('click', () => {
                 // Desabilitar os campos
@@ -100,9 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 actions.removeChild(deleteBtn)
                 form.removeChild(actions)
 
-                // Mostrar a tabela novamente
-                checkWindowSize()
-
+                
                 // Limpar a referência dos botões
                 actions = null
             })
@@ -154,8 +136,6 @@ document.addEventListener('DOMContentLoaded', async () => {
                     actions.removeChild(cancelBtn)
                     form.removeChild(actions)
 
-                    // Mostrar a tabela novamente
-                    checkWindowSize()
 
                     // Limpar a referência dos botões
                     actions = null
@@ -265,6 +245,10 @@ const editarLancamento = async (id) => {
             event.preventDefault()
 
             const formData = new FormData(event.target)
+
+            if(lancamento.descricao === formData.get('descricao-edit') || lancamento.valor === +formData.get('valor-edit'))
+                return closeDialog('dialog-edit-fixos')
+
             lancamento.descricao = formData.get('descricao-edit')
             lancamento.valor = +formData.get('valor-edit')
 
@@ -288,22 +272,6 @@ const editarLancamento = async (id) => {
     }
 }
 
-const excluirLancamento = async (id) => {
-    const confirmacao = confirm('Tem certeza que deseja excluir este lançamento fixo?')
-    if (confirmacao) {
-        try {
-            const status = await api.deleteLaunch(id)
-            if (status === 200 || status === 204) {
-                window.location.reload()
-            } else {
-                alert('Erro ao excluir o lançamento fixo')
-            }
-        } catch (error) {
-            console.error('Erro ao excluir o lançamento fixo:', error)
-        }
-    }
-}
-
 const deletaCliente = async (id) => {
     const confirmacao = confirm('Tem certeza que deseja deletar o cliente?')
     if (confirmacao) {
@@ -317,19 +285,5 @@ const deletaCliente = async (id) => {
         } catch (error) {
             console.error('Erro ao deletar o cliente: ', error)
         }
-    }
-}
-
-function closeDialog(dialogId) {
-    const dialog = document.getElementById(dialogId)
-    if (dialog) {
-        dialog.close()
-    }
-}
-
-const showDialog = (dialogId) => {
-    const dialog = document.getElementById(dialogId)
-    if (dialog) {
-        dialog.showModal()
     }
 }

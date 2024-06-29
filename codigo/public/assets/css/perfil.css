@@ -81,7 +81,7 @@ main span {
 
 .btn-delete:hover {
     color: #f2f2f2;
-    background-color: #77071d;
+    background-color: #b60b2e;
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }
@@ -152,8 +152,19 @@ main form i {
 
 .fixos-title{
     display: grid;
-    grid-template-columns: 92% 8%;
+    grid-template-columns: 90% 10%;
     width: 70%;
+}
+
+.dialog {
+    animation: fadeIn 0.5s ease-in-out;
+    border-radius: 10px;
+    border: 0.3px solid #ccc;
+    -webkit-transition: 50ms;
+}
+
+.dialog::backdrop{
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 #btnDialog{
@@ -194,7 +205,7 @@ main form i {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
     main {
         padding: 10% 5% 5% 5%;
     }
@@ -225,7 +236,7 @@ main form i {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        margin: 0;
+        margin: 0 0 20px 0;
     }
 
     .table{
@@ -235,6 +246,8 @@ main form i {
 
     .table-wrapper{
         width: 100%;
+        height: auto;
+        overflow-y: visible;
     }
 
     .table .btn {

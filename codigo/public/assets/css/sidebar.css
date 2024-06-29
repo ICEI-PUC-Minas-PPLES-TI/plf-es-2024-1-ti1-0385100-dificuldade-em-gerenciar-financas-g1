@@ -191,7 +191,15 @@ body {
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
     display: flex;
+}
+
+main {
     min-height: 100vh;
+    width: 100%;
+    overflow: auto;
+    transition: all 0.35s ease-in-out;
+    background-color: #fafbfe;
+    animation: fadeIn 0.35s ease-in-out;
 }
 
 @keyframes fadeIn {

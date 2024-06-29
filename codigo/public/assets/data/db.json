@@ -39,15 +39,6 @@
     },
     {
       "clienteId": 1,
-      "data": "2024-06-15",
-      "descricao": "Comprei uma maquina de barbear",
-      "valor": -200,
-      "categoriaId": 6,
-      "metodoId": 3,
-      "id": 4
-    },
-    {
-      "clienteId": 1,
       "descricao": "Academia",
       "data": "2024-06-28",
       "valor": -99,
@@ -77,6 +68,15 @@
       "valor": -230,
       "categoriaId": 5,
       "id": 9
+    },
+    {
+      "clienteId": 1,
+      "data": "2024-06-29",
+      "descricao": "Vendi um trabalho",
+      "valor": 50,
+      "categoriaId": 6,
+      "metodoId": 4,
+      "id": 10
     }
   ],
   "categorias": [
