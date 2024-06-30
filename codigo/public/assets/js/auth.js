@@ -7,13 +7,34 @@ const cookies = new Cookie()
 async function login(credential, password) {
     const clientes = await api.getAllClients()
     const cliente = clientes.find(cliente => cliente.email === credential || cliente.username === credential)
-    if(!cliente) return alert("Usuário não encontrado")
+    if (!cliente) return alert("Usuário não encontrado")
 
-    if(cliente.senha === password){
-        cookies.setCookie('username', credential)
-        window.location.href = '/dashboard'
+    const body = {
+        cliente: cliente,
+        senha: password
     }
-    else return alert("Senha inválida")
+
+    try {
+        const response = await fetch('/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(body),
+        })
+
+        if (response.ok) {
+            cookies.setCookie('username', cliente.username)
+            window.location.href = '/dashboard'
+        } else {
+            const errorData = await response.json()
+            alert(`Erro: ${errorData.error}`)
+        }
+    } catch (error) {
+        console.error('Erro ao fazer login:', error)
+        alert('Erro ao fazer login, tente novamente mais tarde.')
+    }
 }
 
 function logout() {
@@ -30,18 +51,17 @@ async function signin(username, name, password, email, budget) {
     if(budget < 0 || isNaN(budget)) return alert("O salário deve ser um número não nulo")
 
     const clientes = await api.getAllClients()
-    console.log(clientes)
     if (clientes.some(cliente => cliente.username === username || cliente.email === email)) return alert("Usuário já cadastrado")
 
     const body = {
-        "username": username,
-        "nome": name,
-        "email": email,
-        "senha": password,
-        "salario": budget
+        username: username,
+        nome: name,
+        email: email,
+        salario: budget,
+        senha: password
     }
 
-    const status = await api.createClient(body);
+    const status = await api.createClient(body)
 
     if (status === 201) {
         cookies.setCookie('username', username)

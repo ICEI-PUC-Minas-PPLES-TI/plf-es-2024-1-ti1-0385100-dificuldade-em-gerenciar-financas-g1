@@ -10,7 +10,7 @@ class Api {
 
   async createClient(body) {
     try {
-      const response = await fetch(this.urlClients, {
+      const response = await fetch('/cadastro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
