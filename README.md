@@ -16,7 +16,6 @@ suas situações financeiras.
 
 * Rommel Vieira Carneiro
 * Simone Alves Nogueira
-* Gabriel Barbosa da Fonseca
 
 ## Instruções de utilização
 
